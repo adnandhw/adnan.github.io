@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemograman Web</title>
+    <link rel=stylesheet href="../../css/file.css" type="text/css">
+    <style type="text/css">
+        .bale {
+            font-family: arial;
+            font-size: 30px;
+            color: blue;
+        }
+
+        /* .hd, .sb, .if { 
+            font-family: arial; 
+            color: rgb(164, 10, 247);
+            background: cyan;
+            font-weight: bold;}
+            .hd{font-size: 14pt;}
+            .sb{font-size: 12pt;}
+            .if{font-size: 10pt;} */
+
+        #layer1 {
+            left: 50;
+            top: 100;
+            z-index: 30;
+        }
+
+        #layer2 {
+            left: 10;
+            top: 100;
+            z-index: 30;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <b class="bale">Tulisan ini tebal karena menggunakan style</b><br>
+        <b class="bale"><i class="bale">Tulisan ini tebal & miring karena menggunakan style</i></b><br>
+        ini adalah contoh <b style="font-size: 26px; color: rgb(13, 240, 187);">bold</b> dengan menggunakan CSS<br>
+        <div id="layer1">
+            <table border="4" bgcolor="cyan" style="margin: 10px;">
+                <tr>
+                    <td>Ini adalah layer 1 <br> Diletakan pada posisi(100)(75)</td>
+                </tr>
+            </table>
+        </div>
+        <div id="layer2">
+            <table border="4" bgcolor="yellow" style="margin: 10px;">
+                <tr>
+                    <td>Ini adalah layer 2 <br> Diletakan pada posisi(150)(120)</td>
+                </tr>
+            </table><br>
+        </div>
+        <span class="hd">Selamat Datang</span><br>
+        <div class="sb">Ini adalah contoh penggunaan web yang menggunakan CSS<br>
+                        Contoh ini menggunakan CSS untuk satu halaman Web<br>
+                        Pendefinisian style cukup dilakukan ditag head<br>
+        </div>
+        <br>
+        <table border="2">
+            <tr>
+                <td class="sb">Style juga dapat dilakukan dalam elemen table</td>
+            </tr>    
+        </table>
+        <br>
+        <hr>
+        <div class="if">Contoh penggunaan CSS untuk satu halaman</div>
+    
+</body>
+</html>
