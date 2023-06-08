@@ -33,20 +33,78 @@
             top: 100;
             z-index: 30;
         }
+        .music-player {
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#equalizer {
+  width: 100%;
+  height: 100px;
+  background-color: #f2f2f2;
+}
+
     </style>
 </head>
 <body>
+    <script language = "JavaScript">
+        var nama = prompt("Masukan ID");
+        document.write("Hai, " + nama);
+        var password = prompt("Masukan Password");
+     </script>
     <div>
         <b class="bale">Tulisan ini tebal karena menggunakan style</b><br>
         <b class="bale"><i class="bale">Tulisan ini tebal & miring karena menggunakan style</i></b><br>
         ini adalah contoh <b style="font-size: 26px; color: rgb(13, 240, 187);">bold</b> dengan menggunakan CSS<br>
-        <div id="layer1">
-            <table border="4" bgcolor="cyan" style="margin: 10px;">
-                <tr>
-                    <td>Ini adalah layer 1 <br> Diletakan pada posisi(100)(75)</td>
-                </tr>
-            </table>
-        </div>
+        <div class="music-player">
+            <audio id="audio-player" src="jav.mp3" controls></audio>
+            <canvas id="equalizer" width="300" height="100"></canvas>
+          </div>
+        
+          <script>
+            window.addEventListener('load', () => {
+  const audioPlayer = document.getElementById('audio-player');
+  const canvas = document.getElementById('equalizer');
+  const ctx = canvas.getContext('2d');
+  
+  const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  const analyser = audioContext.createAnalyser();
+  const source = audioContext.createMediaElementSource(audioPlayer);
+  
+  source.connect(analyser);
+  analyser.connect(audioContext.destination);
+  
+  analyser.fftSize = 256;
+  const bufferLength = analyser.frequencyBinCount;
+  const dataArray = new Uint8Array(bufferLength);
+  
+  function drawEqualizer() {
+    requestAnimationFrame(drawEqualizer);
+  
+    analyser.getByteFrequencyData(dataArray);
+  
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  
+    const barWidth = canvas.width / bufferLength;
+    let barHeight;
+    let x = 0;
+  
+    for (let i = 0; i < bufferLength; i++) {
+      barHeight = dataArray[i];
+  
+      ctx.fillStyle = '#000000';
+      ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+  
+      x += barWidth + 1;
+    }
+  }
+  
+  drawEqualizer();
+});
+
+          </script>
         <div id="layer2">
             <table border="4" bgcolor="yellow" style="margin: 10px;">
                 <tr>
