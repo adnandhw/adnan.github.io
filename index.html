@@ -13,6 +13,17 @@
             font-size: 30px;
             color: blue;
         }
+        .music-player {
+            width: 300px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        #equalizer {
+            width: 100%;
+            height: 100px;
+            background-color: #f2f2f2;
+        }
 
         body {
             background-image: url('wall.jpg');
@@ -28,28 +39,10 @@
             .sb{font-size: 12pt;}
             .if{font-size: 10pt;} */
 
-        #layer1 {
-            left: 50;
-            top: 100;
-            z-index: 30;
-        }
-
         #layer2 {
             left: 10;
             top: 100;
             z-index: 30;
-        }
-
-        .music-player {
-            width: 300px;
-            margin: 50px auto;
-            text-align: center;
-        }
-
-        #equalizer {
-            width: 100%;
-            height: 100px;
-            background-color: #f2f2f2;
         }
     </style>
 </head>
@@ -61,8 +54,8 @@
         var password = prompt("Password Apa Aja");
     </script>
     <div>
-        <b class="bale">Tulisan ini tebal karena menggunakan style</b><br>
-        <b class="bale"><i class="bale">Tulisan ini tebal & miring karena menggunakan style</i></b><br>
+        <b class="bale">Selamat Datang</b><br>
+        <b class="bale"><i class="bale">Mainkan MUsic-Mu</i></b><br>
         ini adalah contoh <b style="font-size: 26px; color: rgb(13, 240, 187);">bold</b> dengan menggunakan CSS<br>
         <div class="music-player">
             <audio src="phonecall.mp3" controls>MUSIK GA SIH</audio>
@@ -115,7 +108,18 @@
         <div id="layer2">
             <table border="4" bgcolor="yellow" style="margin: 10px;">
                 <tr>
-                    <td>Ini adalah layer 2 <br> Diletakan pada posisi(150)(120)</td>
+                    <script language="JavaScript">
+                        document.write("20 + 3 = " + (20 + 3));
+                        document.write("<BR>");
+                        document.write("20 + 3 = " + (20 - 3));
+                        document.write("<BR>");
+                        document.write("20 * 3 = " + (20 * 3));
+                        document.write("<BR>");
+                        document.write("20 / 3 = " + (20 / 3));
+                        document.write("<BR>");
+                        document.write("20 % 3 = " + (20 % 3));
+                        document.write("<BR>");
+                    </script>
                 </tr>
             </table><br>
         </div>
