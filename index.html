@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -13,16 +13,11 @@
             font-size: 30px;
             color: blue;
         }
+
         .music-player {
             width: 300px;
             margin: 50px auto;
             text-align: center;
-        }
-
-        #equalizer {
-            width: 100%;
-            height: 100px;
-            background-color: #f2f2f2;
         }
 
         body {
@@ -30,43 +25,330 @@
             background-size: cover;
         }
 
-        /* .hd, .sb, .if { 
-            font-family: arial; 
-            color: rgb(164, 10, 247);
-            background: cyan;
-            font-weight: bold;}
-            .hd{font-size: 14pt;}
-            .sb{font-size: 12pt;}
-            .if{font-size: 10pt;} */
+        #output {
+            white-space: pre;
+            /* Mempertahankan pemformatan teks */
+            font-family: monospace;
+            /* Menggunakan font monospace untuk mempertahankan lebar karakter yang konsisten */
+        }
 
-        /*#layer2 {
-            left: 10;
-            top: 100;
-            z-index: 30;
-        }*/
+        .container {
+            overflow: auto;
+            /* Mengatur overflow agar konten tidak keluar dari wadah */
+        }
+
+        .item {
+            float: left;
+            /* Mengatur elemen agar melayang ke kiri */
+        }
+
+        #tampilan-jam {
+            color: rgb(9, 183, 252);
+            /* Mengatur warna teks menjadi putih */
+        }
     </style>
 </head>
 
 <body>
-    <script language="JavaScript">
-        var nama = prompt("Masukan Nama Anda");
-        document.write("Hai, " + nama);
-        var password = prompt("Password Apa Aja");
-    </script>
     <div>
-        <b class="bale">Selamat Datang</b><br>
-        <b class="bale"><i class="bale">Mainkan MUsic-Mu</i></b><br>
-        ini adalah contoh <b style="font-size: 26px; color: rgb(13, 240, 187);">bold</b> dengan menggunakan CSS<br>
-        <div class="music-player">
-            <audio src="djsahara.mp3" controls>MUSIK GA SIH</audio>
-            <canvas id="equalizer" width="300" height="100">EQUALIZER</canvas>
+        <script language="javascript">
+            var nama = prompt("Masukan Nama Anda");
+            document.write("Hai, " + nama);
+        </script>
+        <br>
+        <b class="bale">Selamat Datang</b>
+    </div>
+    <div class="container">
+        <div class="item">
+            <!-- <table border="1" style="margin-bottom:30px; margin-top:30px;"> -->
+            <table border="4" bgcolor="yellow" style="margin: 50px;">
+                <th>
+                    <tr>
+                        <td>
+                            <script language="JavaScript">
+                                var a = parseInt("27");
+                                document.write("1. " + a + "<br>");
+                                a = parseInt("27.5");
+                                document.write("2. " + a + "<br>");
+                                var a = parseInt("27A");
+                                document.write("3. " + a + "<br>");
+                                a = parseInt("A27.5");
+                                document.write("4. " + a + "<br>");
+                                var b = parseFloat("27");
+                                document.write("5. " + b + "<br>");
+                                b = parseFloat("27.5");
+                                document.write("6. " + b + "<br>");
+                                var b = parseFloat("27A");
+                                document.write("7. " + b + "<br>");
+                                b = parseFloat("A27.5");
+                                document.write("8. " + b + "<br>");
+                            </script>
+                        </td>
+                    </tr>
+                </th>
+            </table>
         </div>
+        <div class="item">
+            <table border="4" bgcolor="yellow" style="margin: 50px;">
+                <th>
+                    <tr>
+                        <td>
+                            <script language="javascript">
+                                document.write("20 + 3 = " + (20 + 3));
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <script language="javascript">
+                                document.write("20 - 3 = " + (20 - 3));
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <script language="javascript">
+                                document.write("20 * 3 = " + (20 * 3));
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <script language="javascript">
+                                document.write("20 / 3 = " + (20 / 3));
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <script language="javascript">
+                                document.write("20 % 3 = " + (20 % 3));
+                            </script>
+                        </td>
+                    </tr>
+                </th>
+            </table>
+        </div>
+        <div class="item">
+            <table border="4" bgcolor="yellow" style="margin: 50px;">
+                <th>
+                    <tr>
+                        <td>
+                            <script language="JavaScript">
+                                var bilangan = 0;
+                                while (bilangan < 5) {
+                                    document.write("JavaScript<br>");
+                                    bilangan++;
+                                }
+                            </script>
+                        </td>
+                    </tr>
+                </th>
+            </table>
+        </div>
+        <div class="item">
+            <table border="4" bgcolor="yellow" style="margin: 50px;">
+                <th>
+                    <tr>
+                        <td>
+                            <script language="JavaScript">
+                                var bilangan = 0;
 
+                                for (bilangan = 1; bilangan <= 5; bilangan++)
+                                    document.write(bilangan + "<br>");
+                            </script>
+                        </td>
+                    </tr>
+                </th>
+            </table>
+        </div>
+        <div class="item">
+            <table border="4" bgcolor="yellow" style="margin: 50px;">
+                <th>
+                    <tr>
+                        <td>
+                            <script language="JavaScript">
+                                function jumlah(x, y) {
+                                    var hasil = x + y;
+                                    return (hasil);
+                                }
+                                var z = jumlah(2, 3);
+                                document.write(z);
+                                document.write("<br>");
+                                document.write(jumlah(4, 5));
+                            </script>
+
+                        </td>
+                    </tr>
+                </th>
+            </table>
+        </div>
+        <div class="item">
+            <table border="4" bgcolor="yellow" style="margin: 50px;">
+                <th>
+                    <tr>
+                        <td>
+                            <script language="JavaScript">
+                                function faktorial(n) {
+                                    if (n == 0)
+                                        return (1);
+                                    else
+                                        return (n * faktorial(n - 1));
+                                }
+                                document.write("5! = " + faktorial(5));
+                            </script>
+                        </td>
+                    </tr>
+                </th>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item">
+            <table style="margin: 30px;">
+                <th>
+                    <tr>
+                        <td>
+                            <script language="JavaScript">
+                                function displayDate() {
+                                    var inputDate = prompt("Masukkan tanggal (dd/mm/yyyy):");
+                                    var dateParts = inputDate.split("/");
+                                    var day = dateParts[0];
+                                    var month = dateParts[1];
+                                    var year = dateParts[2];
+
+                                    var formattedDate = day + "/" + month + "/" + year;
+
+                                    var output = "Tanggal : " + formattedDate;
+                                    document.getElementById("result").textContent = output;
+                                }
+                            </script>
+                            <button onclick="displayDate()">Klik Untuk Menampilkan Tanggal</button>
+                            <p id="result"></p>
+                        </td>
+                    </tr>
+                </th>
+            </table>
+        </div>
+        <div class="item">
+            <table style="margin: 30px;">
+                <th>
+                    <tr>
+                        <td>
+                            <script>
+                                function generatePattern() {
+                                    var baris, i = 0;
+                                    var nilai_prompt = prompt("Tinggi: ", 5);
+                                    var tinggi = parseInt(nilai_prompt);
+
+                                    var output = ""; // Menyimpan output pola bintang
+
+                                    for (baris = 1; baris <= tinggi; baris++) {
+                                        // Buat sejumlah spasi
+                                        for (i = 1; i <= tinggi - baris; i++) {
+                                            output += " "; // Karakter spasi
+                                        }
+                                        // Tampilkan *
+                                        for (i = 1; i < 2 * baris; i++) {
+                                            output += "*";
+                                        }
+                                        // Pindah baris
+                                        output += "<br>";
+                                    }
+
+
+                                    // Menampilkan output di dalam elemen dengan id "output"
+                                    document.getElementById("output").innerHTML = output;
+
+                                    return false; // Mencegah refresh halaman
+                                }
+
+                            </script>
+                            <button onclick="generatePattern(); return false;">Klik Dan Masukan Angka Untuk Membuat
+                                Perulangan
+                                :</button>
+                            <pre id="output"></pre>
+                        </td>
+                    </tr>
+                </th>
+            </table>
+        </div>
+        <div class="item">
+            <table style="margin: 30px;">
+                <th>
+                    <tr>
+                        <td>
+                            <script>
+                                function setJam() {
+                                    var inputJam = document.getElementById("input-jam").value;
+                                    var inputMenit = document.getElementById("input-menit").value;
+                                    var inputDetik = document.getElementById("input-detik").value;
+
+                                    var jam = parseInt(inputJam);
+                                    var menit = parseInt(inputMenit);
+                                    var detik = parseInt(inputDetik);
+
+                                    // Cek apakah waktu yang diinput benar
+                                    if (jam >= 0 && jam <= 23 && menit >= 0 && menit <= 59 && detik >= 0 && detik <= 59) {
+                                        var tampilanJam = document.getElementById("tampilan-jam");
+                                        tampilanJam.innerHTML = jam + ":" + menit + ":" + detik;
+                                        alert("Jam telah diatur dengan benar!");
+
+                                        setInterval(updateJam, 1000); // Memanggil fungsi updateJam setiap 1 detik
+                                    } else {
+                                        alert("Masukkan waktu yang valid!");
+                                    }
+                                }
+
+                                function updateJam() {
+                                    var tampilanJam = document.getElementById("tampilan-jam");
+                                    var jamMenitDetik = tampilanJam.innerHTML.split(":");
+                                    var jam = parseInt(jamMenitDetik[0]);
+                                    var menit = parseInt(jamMenitDetik[1]);
+                                    var detik = parseInt(jamMenitDetik[2]);
+
+                                    detik++;
+
+                                    if (detik === 60) {
+                                        detik = 0;
+                                        menit++;
+                                    }
+
+                                    if (menit === 60) {
+                                        menit = 0;
+                                        jam++;
+                                    }
+
+                                    if (jam === 24) {
+                                        jam = 0;
+                                    }
+
+                                    tampilanJam.innerHTML = formatWaktu(jam) + ":" + formatWaktu(menit) + ":" + formatWaktu(detik);
+                                }
+
+                                function formatWaktu(waktu) {
+                                    return waktu < 10 ? "0" + waktu : waktu;
+                                }
+                            </script>
+                            <input type="number" id="input-jam" placeholder="Masukan Jam (0-23)">
+                            <input type="number" id="input-menit" placeholder="Masukan Menit (0-59)">
+                            <input type="number" id="input-detik" placeholder="Masukan Detik (0-59)">
+                            <button onclick="setJam()">Set Jam</button>
+
+                            <h2 id="tampilan-jam"></h2>
+                        </td>
+                    </tr>
+                </th>
+            </table>
+        </div>
+    </div>
+    <div>
+        <div class="music-player">
+            <audio src="hero.mp3" controls>MUSIK GA SIH</audio>
+        </div>
         <script>
             window.addEventListener('load', () => {
-                const audioPlayer = document.getElementById('audio-player');
-                const canvas = document.getElementById('equalizer');
-                const ctx = canvas.getContext('2d');
+                const audioPlayer = document.getElementById('audioPlayer');
 
                 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
                 const analyser = audioContext.createAnalyser();
@@ -78,51 +360,9 @@
                 analyser.fftSize = 256;
                 const bufferLength = analyser.frequencyBinCount;
                 const dataArray = new Uint8Array(bufferLength);
-
-                function drawEqualizer() {
-                    requestAnimationFrame(drawEqualizer);
-
-                    analyser.getByteFrequencyData(dataArray);
-
-                    ctx.fillStyle = '#ffffff';
-                    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-                    const barWidth = canvas.width / bufferLength;
-                    let barHeight;
-                    let x = 0;
-
-                    for (let i = 0; i < bufferLength; i++) {
-                        barHeight = dataArray[i];
-
-                        ctx.fillStyle = '#000000';
-                        ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-
-                        x += barWidth + 1;
-                    }
-                }
-
-                drawEqualizer();
             });
-
         </script>
-        <div id="layer2">
-            <table border="4" bgcolor="yellow" style="margin: 10px;">
-                <tr>
-                    <script language="JavaScript">
-                        document.write("20 + 3 = " + (20 + 3));
-                        document.write("<BR>");
-                        document.write("20 + 3 = " + (20 - 3));
-                        document.write("<BR>");
-                        document.write("20 * 3 = " + (20 * 3));
-                        document.write("<BR>");
-                        document.write("20 / 3 = " + (20 / 3));
-                        document.write("<BR>");
-                        document.write("20 % 3 = " + (20 % 3));
-                        document.write("<BR>");
-                    </script>
-                </tr>
-            </table><br>
-        </div>
+    </div>
 </body>
 
 </html>
