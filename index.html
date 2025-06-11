@@ -2,62 +2,87 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Bikin responsif di HP -->
   <title>Profil Adnan Wahab</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
+      margin: 0;
+      background: linear-gradient(135deg, #ffc1cc, #ffe4e1);
+      color: #333;
+    }
+    .container {
       max-width: 600px;
       margin: auto;
     }
     .page {
       display: none;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
     }
     .active {
       display: block;
     }
     button {
       margin-top: 20px;
-      padding: 10px 20px;
+      padding: 12px 24px;
       font-size: 16px;
+      background-color: #ff7f7f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #ff4d4d;
     }
   </style>
 </head>
 <body>
 
-  <div class="page active" id="page1">
-    <h2>Biodata Diri</h2>
-    <p><strong>Nama:</strong> Adnan Wahab</p>
-    <p><strong>Alamat:</strong> Jakarta</p>
-    <p><strong>Pendidikan Terakhir:</strong> Calon Expert di Bidangannya</p>
-    <p><strong>Pekerjaan:</strong> Mobile Developer</p>
-    <p><strong>Hobi:</strong> Memelihara Hewan</p>
-    <button onclick="nextPage()">Next</button>
-  </div>
+  <div class="container">
+    <div class="page active" id="page1">
+      <h2>Biodata Diri</h2>
+      <p><strong>Nama:</strong> Adnan Wahab</p>
+      <p><strong>Alamat:</strong> Jakarta</p>
+      <p><strong>Pendidikan Terakhir:</strong> Calon Expert di Bidangannya</p>
+      <p><strong>Pekerjaan:</strong> Mobile Developer</p>
+      <p><strong>Hobi:</strong> Memelihara Hewan</p>
+      <button onclick="nextPage()">Next</button>
+    </div>
 
-  <div class="page" id="page2">
-    <h2>Tujuan Hidup</h2>
-    <p>Saya ingin menjadi pribadi yang bermanfaat bagi keluarga dan masyarakat, serta membangun masa depan yang baik 
-      dengan pasangan hidup saya. Dalam menjalani hidup, saya dikenal sebagai sosok yang selalu ceria dan penuh semangat, 
-      meskipun sering kali beban pekerjaan yang berat dilimpahkan kepada saya tanpa kompromi—saya tak pernah mengeluh, 
-      walau dalam hati kadang terlintas rasa dongkol. Saya memiliki selera humor yang kuat dan mudah mencairkan suasana, 
-      namun di balik sikap santai itu, saya adalah pribadi yang bercita-cita tinggi dan sangat gigih dalam mengejar 
-      apa yang saya yakini. Saya menjunjung tinggi prinsip hidup tanpa hutang, menjauhi segala bentuk riba, 
-      dan memilih untuk hidup dalam kesederhanaan dengan penampilan yang simple namun tetap percaya diri.</p>
-    <button onclick="nextPage()">Next</button>
-  </div>
+    <div class="page" id="page2">
+      <h2>Tujuan Hidup</h2>
+      <p>Saya ingin menjadi pribadi yang bermanfaat bagi keluarga dan masyarakat, serta membangun masa depan yang baik 
+        dengan pasangan hidup saya. Dalam menjalani hidup, saya dikenal sebagai sosok yang selalu ceria dan penuh semangat, 
+        meskipun sering kali beban pekerjaan yang berat dilimpahkan kepada saya tanpa kompromi—saya tak pernah mengeluh, 
+        walau dalam hati kadang terlintas rasa dongkol. Saya memiliki selera humor yang kuat dan mudah mencairkan suasana, 
+        namun di balik sikap santai itu, saya adalah pribadi yang bercita-cita tinggi dan sangat gigih dalam mengejar 
+        apa yang saya yakini. Saya menjunjung tinggi prinsip hidup tanpa hutang, menjauhi segala bentuk riba, 
+        dan memilih untuk hidup dalam kesederhanaan dengan penampilan yang simple namun tetap percaya diri.</p>
+      <button onclick="nextPage()">Next</button>
+    </div>
 
-  <div class="page" id="page3">
-    <h2>Tentang Wanita yang Saya Cintai</h2>
-    <p>Saya menyukai cara dia tertawa, cara dia memperhatikan hal-hal kecil, dan semangatnya dalam menjalani hidup. 
-      Bagi saya, dia adalah definisi ketenangan. Ia bukan hanya sekadar hadir, tapi mampu membawa rasa nyaman hanya 
-      dengan tatapan mata dan senyuman sederhana. Saya melihat dirinya sebagai sosok wanita berpenampilan sopan 
-      yang selalu menjaga dirinya, tetap ceria meskipun saya tahu di dalam hatinya mungkin tersimpan banyak luka dan 
-      kesedihan yang ia sembunyikan dengan senyum tulus. Ia manis dalam tutur kata, lembut dalam sikap, dan cerdas dalam 
-      berpikir—perpaduan yang membuat saya kagum dan makin menghargainya sebagai wanita yang istimewa. Bagi saya, 
-      dialah wanita yang layak diperjuangkan, bukan hanya karena perasaannya, tapi juga karena jiwanya.
-      Jika Anda ingin mengenal saya lebih lanjut bisa next sekarang juga 😊😊</p>
-    <button onclick="nextPage()">Next</button>
+    <div class="page" id="page3">
+      <h2>Tentang Wanita yang Saya Cintai</h2>
+      <p>Saya menyukai cara dia tertawa, cara dia memperhatikan hal-hal kecil, dan semangatnya dalam menjalani hidup. 
+        Bagi saya, dia adalah definisi ketenangan. Ia bukan hanya sekadar hadir, tapi mampu membawa rasa nyaman hanya 
+        dengan tatapan mata dan senyuman sederhana. Saya melihat dirinya sebagai sosok wanita berpenampilan sopan 
+        yang selalu menjaga dirinya, tetap ceria meskipun saya tahu di dalam hatinya mungkin tersimpan banyak luka dan 
+        kesedihan yang ia sembunyikan dengan senyum tulus. Ia manis dalam tutur kata, lembut dalam sikap, dan cerdas dalam 
+        berpikir—perpaduan yang membuat saya kagum dan makin menghargainya sebagai wanita yang istimewa. Bagi saya, 
+        dialah wanita yang layak diperjuangkan, bukan hanya karena perasaannya, tapi juga karena jiwanya.
+        Jika Anda ingin mengenal saya lebih lanjut bisa next sekarang juga 😊😊</p>
+      <button onclick="nextPage()">Next</button>
+    </div>
   </div>
 
   <script>
@@ -69,44 +94,10 @@
       if (currentPage <= 3) {
         document.getElementById(`page${currentPage}`).classList.add('active');
       } else {
-        window.location.href = "https://wa.me/6281290054641"; // langsung ke WhatsApp abang
+        window.location.href = "https://wa.me/6281290054641";
       }
     }
   </script>
-
-  <style>
-  body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
-    background: linear-gradient(135deg, #ffc1cc, #ffe4e1);
-    color: #333;
-  }
-  .page {
-    display: none;
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  .active {
-    display: block;
-  }
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ff7f7f;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #ff4d4d;
-  }
-</style>
 
 </body>
 </html>
