@@ -104,7 +104,10 @@
     currentPage++;
     if (currentPage <= 3) {
       document.getElementById(`page${currentPage}`).classList.add('active');
-      window.scrollTo(0, 0); // Scroll ke atas setelah berpindah halaman
+      // Tambahkan delay kecil agar scroll berjalan setelah elemen muncul
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
     } else {
       window.location.href = "https://wa.me/6281290054641";
     }
