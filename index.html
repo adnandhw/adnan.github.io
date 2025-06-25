@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
     * {
       box-sizing: border-box;
     }
+
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
@@ -15,10 +17,12 @@
       background: linear-gradient(135deg, #ffc1cc, #ffe4e1);
       color: #333;
     }
+
     .container {
       max-width: 600px;
       margin: auto;
     }
+
     .page {
       display: none;
       background-color: white;
@@ -27,9 +31,11 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       margin-bottom: 20px;
     }
+
     .active {
       display: block;
     }
+
     button {
       margin-top: 20px;
       padding: 12px 24px;
@@ -41,73 +47,89 @@
       cursor: pointer;
       width: 100%;
     }
+
     button:hover {
       background-color: #ff4d4d;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Musik autoplay saat user klik "Buka" -->
   <audio id="bgMusic" loop>
     <source src="all of me.mp3" type="audio/mp3">
   </audio>
 
   <div class="container">
-    <!-- Halaman pembuka -->
     <div class="page active" id="opening">
       <h2>Selamat Datang Nona Manis!</h2>
       <button onclick="startExperience()">Buka</button>
     </div>
 
-    <!-- Halaman 1 -->
     <div class="page" id="page1">
-      <h2>Perkenalkan Saya</h2>
+      <h2>Saya</h2>
       <p><strong>Nama:</strong> Adnan Wahab</p>
       <p><strong>Alamat:</strong> Jakarta</p>
       <p><strong>Pendidikan Terakhir:</strong> SMK</p>
-      <p><strong>Pekerjaan:</strong> Security Engineer</p>
       <p><strong>Hobi:</strong> Memelihara Hewan</p>
       <button onclick="nextPage()">Next</button>
     </div>
 
-    <!-- Halaman 2 -->
     <div class="page" id="page2">
       <h2>Tujuan Hidup Saya</h2>
-      <p>Saya tidak ingin sekadar menjadi sosok yang hadir di dunia ini tanpa makna. 
-        Tujuan hidup saya adalah menjadi seseorang yang mampu mencintai dengan tulus, memberi tanpa pamrih, 
-        dan menghadirkan ketenangan bagi orang-orang di sekitar saya. Saya ingin keberadaan saya membawa rasa aman, 
-        terutama bagi seseorang yang kelak menjadi pendamping hidup saya—bukan karena saya sempurna, 
-        tapi karena saya sungguh-sungguh mencintai dan menghargainya apa adanya.</p>
-      <p>Bagi saya, hidup bukan tentang seberapa tinggi saya bisa berdiri, 
-        tetapi seberapa rendah hati saya bisa membungkuk untuk mengerti dan mendengar. 
-        Saya percaya, cinta yang tulus lahir dari keikhlasan dan kesediaan untuk menerima kekurangan, 
-        bukan dari pencitraan atau kemewahan yang menipu pandangan.</p>
-      <p>Dalam hubungan, saya ingin menjadi tempat pulang—bukan hanya secara fisik, tapi secara batin. 
-        Saya ingin menjadi seseorang yang menghapus lelahnya, menyeka air matanya, 
-        dan menenangkan hatinya ketika dunia terasa berat. Saya tidak bisa menjanjikan kehidupan yang tanpa badai, 
-        tapi saya berjanji akan selalu menggenggam tanganmu ketika badai datang.</p>
-      <p>Tujuan saya sederhana: membangun hidup yang jujur, tenang, dan bermakna. 
-        Jika Tuhan mengizinkan, saya ingin berbagi hidup dengan seseorang yang tidak hanya saya cintai, 
-        tapi juga saya doakan setiap malam, karena ia adalah bagian dari tujuan terbesar saya: mencintai dengan cara yang benar.</p>
+      <p>Saya memulai setiap langkah hidup dengan satu hal paling utama: mendengarkan dan menghormati orang tua. Ridho
+        orang tua adalah pintu berkah yang tak tergantikan. Doa dan restu mereka adalah kompas utama saya untuk menapaki
+        jalan kehidupan ini. Tanpa restu mereka, sebesar apa pun pencapaian dunia, rasanya akan selalu ada yang kosong
+        di hati. Maka selama mereka hidup, tujuan saya adalah membuat mereka bangga, bahagia, dan merasa dihargai oleh
+        anaknya sendiri.</p>
+      <p>Ibadah adalah fondasi hidup saya. Saya meyakini bahwa apa pun yang saya kejar di dunia ini akan sia-sia jika
+        tidak disertai dengan kewajiban sebagai hamba, yaitu shalat lima waktu. Saya berusaha menjaga waktu-waktu itu
+        karena saya ingin sukses dunia akhirat, bukan hanya terlihat hebat di dunia tapi juga dicatat baik di sisi
+        Allah. Shalat bukan hanya rutinitas, melainkan tempat saya menyandarkan lelah dan menata ulang semangat hidup
+        setiap harinya.</p>
+      <p>Sejak awal, saya sudah menetapkan satu cita-cita besar: menjadi seorang Security Engineer atau Software
+        Engineer yang tidak hanya paham teknis, tetapi juga membawa pengaruh baik dalam dunia teknologi. Saya ingin
+        menghasilkan karya yang bermanfaat dan menjadi bagian dari solusi. Saya sadar, mimpi tak akan berjalan sendiri,
+        maka saya tempuh semua proses belajar, gagal, bangkit lagi, terus berkembang—karena bagi saya, cita-cita bukan
+        hanya angan, tapi tanggung jawab untuk direalisasikan.</p>
+      <p>Hidup tak pernah memberi jaminan mulus. Saya sudah bersiap untuk tahan banting, menghadapi badai, dan melewati
+        jalan terjal yang mungkin penuh luka. Tapi saya tidak akan pernah berhenti. Ketika orang lain menyerah, saya
+        memilih berdiri. Ketika dunia berkata "tidak bisa", saya akan membuktikan bahwa saya bisa. Karena saya tahu,
+        kesuksesan bukan milik yang paling pintar, tapi milik mereka yang paling sabar dan tidak menyerah.</p>
+      <p>Saya menjunjung tinggi prinsip hidup bebas dari riba dan utang. Saya percaya bahwa ketenangan hidup tidak
+        pernah datang dari sesuatu yang haram. Saya ingin hidup jujur, bersih, dan merdeka secara finansial tanpa harus
+        bergantung pada sistem yang menjerat. Prinsip ini saya pegang bukan karena ikut-ikutan, tapi karena saya ingin
+        membangun masa depan yang diberkahi dan penuh ketenangan.</p>
+      <p>Pada akhirnya, saya ingin hidup dalam cinta dan kasih sayang. Tidak hanya mencintai pasangan hidup saya nanti,
+        tapi juga mencintai kehidupan ini dengan tulus. Saya ingin menjadi tempat pulang, tempat tenang, dan teman dalam
+        setiap kondisi. Cinta yang saya bangun bukan sekadar romantisme, tapi tanggung jawab dan keikhlasan. Dengan
+        cinta yang benar dan kasih sayang yang tulus, saya percaya bahwa rumah tangga dan kehidupan saya akan jadi surga
+        kecil di dunia yang penuh ujian ini.</p>
       <button onclick="nextPage()">Next</button>
     </div>
 
-    <!-- Halaman 3 -->
     <div class="page" id="page3">
       <h2>Hai Nona Manis</h2>
-      <p>Saya mengagumi cara kamu tersenyum pada dunia, bahkan ketika dunia tak selalu ramah padamu. Ketika kamu tertawa, 
-        seolah dunia menjadi sedikit lebih ringan. Kamu memperhatikan hal-hal kecil dengan ketulusan yang jarang saya temui—itulah yang membuatmu begitu istimewa.
-        Bagimu, ketenangan bukan hanya sikap, tapi pancaran dari jiwamu. Kamu hadir bukan hanya dengan tubuh, tetapi juga dengan hati yang penuh kasih. 
-        Dalam diam ada kekuatan, dalam senyum ada keberanian. Saya melihat dirimu sebagai wanita yang menjaga nilai-nilainya, 
+      <p>Saya mengagumi cara kamu tersenyum pada dunia, bahkan ketika dunia tak selalu ramah padamu. Ketika kamu
+        tertawa,
+        seolah dunia menjadi sedikit lebih ringan. Kamu memperhatikan hal-hal kecil dengan ketulusan yang jarang saya
+        temui-itulah yang membuatmu begitu istimewa.
+        Bagiku, ketenangan bukan hanya sikap, tapi pancaran dari jiwamu. Kamu hadir bukan hanya dengan tubuh, tetapi
+        juga dengan hati yang penuh kasih.
+        Dalam diam ada kekuatan, dalam senyum ada keberanian. Saya melihat dirimu sebagai wanita yang menjaga
+        nilai-nilainya,
         tetap anggun dalam kesederhanaan, dan juga kuat.</p>
-      <p>Kamu bukan hanya cerdas dalam berpikir, tapi juga bijak dalam menyikapi hidup. Dan dalam setiap hal yang kamu lakukan, 
-        saya melihat ketulusan yang membuat saya merasa beruntung bisa mengenalmu. Kamu adalah sosok yang tidak hanya layak untuk dicintai,
-        tapi juga untuk dihormati dan diperjuangkan—karena dirimu adalah anugerah, bukan sekadar kehadiran.</p>
-      <p>Jika kelak takdir mempertemukan kita dalam sebuah rumah tangga, saya percaya bahwa kebahagiaan bukan berasal dari kemewahan,
-        melainkan dari kesederhanaan yang penuh cinta, dari saling menerima kekurangan, 
-        dan dari doa-doa yang tulus setiap harinya. Rumah bukan hanya tempat tinggal, tetapi tempat jiwa menemukan pulangnya.</p>
-      <p>Jika Kamu ingin mengenal saya lebih lanjut bisa next sekarang juga 😊😊</p>
+      <p>Kamu bukan hanya cerdas dalam berpikir, tapi juga bijak dalam menyikapi hidup. Dan dalam setiap hal yang kamu
+        lakukan,
+        saya melihat ketulusan yang membuat saya merasa beruntung bisa mengenalmu. Kamu adalah sosok yang tidak hanya
+        layak untuk dicintai,
+        tapi juga untuk dihormati dan diperjuangkan-karena dirimu adalah anugerah, bukan sekadar kehadiran.</p>
+      <p>Jika kelak takdir mempertemukan kita dalam sebuah rumah tangga, saya percaya bahwa kebahagiaan bukan berasal
+        dari kemewahan,
+        melainkan dari kesederhanaan yang penuh cinta, dari saling menerima kekurangan,
+        dan dari doa-doa yang tulus setiap harinya. Rumah bukan hanya tempat tinggal, tetapi tempat jiwa menemukan
+        pulangnya.</p>
+      <p>Jika Kamu menerima Saya bisa langsung jawab next sekarang juga 😊😊</p>
       <button onclick="nextPage()">Next</button>
     </div>
   </div>
@@ -116,11 +138,9 @@
     let currentPage = 1;
 
     function startExperience() {
-      // Sembunyikan pembuka, tampilkan halaman 1
       document.getElementById('opening').classList.remove('active');
       document.getElementById('page1').classList.add('active');
 
-      // Mainkan musik
       const music = document.getElementById('bgMusic');
       music.volume = 0.5;
       music.play().catch(err => {
@@ -143,4 +163,5 @@
   </script>
 
 </body>
+
 </html>
