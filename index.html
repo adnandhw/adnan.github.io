@@ -16,10 +16,20 @@
       margin: 0;
       padding: 20px;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #ffc1cc, #ffe4e1);
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.7);
     }
 
     .container {
